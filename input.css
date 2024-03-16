@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header sidebar'
+    'content content content sidebar'
+    'footer footer footer sidebar';
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+.grid-3x3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    gap: 10px;
+}
+
+.grid-3x3-item {
+    height: 100px;
+    width: 100px;
+    background-color: #ff5050;
+    border: 5px solid #ff1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
